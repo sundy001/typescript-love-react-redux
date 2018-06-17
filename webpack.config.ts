@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import { Configuration } from 'webpack';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import { join } from 'path';
 
 const config: Configuration = {
   mode: 'development',
@@ -25,6 +26,12 @@ const config: Configuration = {
         '.js',
         '.jsx',
       ]
+  },
+  devServer: {
+    contentBase: join(__dirname, 'dist'),
+    compress: true,
+    index: 'ts-todo.html',
+    port: 9000
   },
   plugins: [
     new HtmlWebpackPlugin({

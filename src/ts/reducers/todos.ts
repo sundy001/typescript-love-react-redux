@@ -1,4 +1,4 @@
-import { State } from './type';
+import { State, TodoItem } from './type';
 import { Reducer } from '../type';
 
 const todos: Reducer<State['todos']> = (state = [], action) => {
@@ -14,7 +14,7 @@ const todos: Reducer<State['todos']> = (state = [], action) => {
       ];
  
     case 'TOGGLE_TODO':
-      return state.map(todo =>
+      return state.map<TodoItem>(todo =>
         (todo.id === action.payload.id)
           ? { ...todo, completed: !todo.completed }
           : todo
