@@ -19,5 +19,5 @@ Demonstrate how to annotate type in react-redux project with `strict` flag on.
 ## Suggestion for TS beginners
 - enable `strict` flag in `tsconfig.json`, enforce the type annotation as strict as possible
 - At the begining annotate everything to `any`, annotate type later. It will save you a lot of time.
-- When a error occure, read message bottom-up.
-- Utilize command key, which help you jump to type definition.
+- When a error occure, read the error message bottom-up.
+- Utilize command key, which help you jumping to type definition.

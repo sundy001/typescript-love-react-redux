@@ -1,7 +1,7 @@
 import { State } from './type';
 import { Reducer } from '../type';
 
-const todos: Reducer<State['todos'] | undefined> = (state = [], action) => {
+const todos: Reducer<State['todos']> = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [

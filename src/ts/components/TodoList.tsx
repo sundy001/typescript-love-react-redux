@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Todo from './Todo';
+import { State } from '../reducers';
 
 const TodoList: React.SFC<Props> = ({ todos, toggleTodo }) => (
   <ul>
@@ -14,13 +15,7 @@ const TodoList: React.SFC<Props> = ({ todos, toggleTodo }) => (
 );
 
 export type Props = Readonly<{
-  todos: ReadonlyArray<
-    Readonly<{
-      id: number;
-      completed: boolean;
-      text: string;
-    }>
-  >;
+  todos: State['todos'],
   toggleTodo: (id: number) => void;
 }>;
 

@@ -8,7 +8,7 @@ const todos = (state = [], action) => {
           text: action.payload.text,
           completed: false
         }
-      ]
+      ] 
 
     case 'TOGGLE_TODO':
       return state.map(todo =>

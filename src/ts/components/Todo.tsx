@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { TodoItem } from '../reducers';
 
 const Todo: React.SFC<Props> = ({ onClick, completed, text }) => (
   <li
@@ -14,8 +15,6 @@ const Todo: React.SFC<Props> = ({ onClick, completed, text }) => (
 
 type Props = Readonly<{
   onClick: React.MouseEventHandler<HTMLLIElement>;
-  completed: boolean;
-  text: string;
-}>;
+}> & TodoItem;
 
 export default Todo;
