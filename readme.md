@@ -11,9 +11,7 @@ Demonstrate how to annotate type in react-redux project with `strict` flag on.
     - prevent accessing non-existing properties of action/state
     - type check on return type
 - Fluent coding experience for Props declaration of React components 
-- Type check on connected component
 - Check style attributes
-- auto complete
 
 ## Use case
 - Have a big team / project
