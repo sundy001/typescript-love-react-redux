@@ -21,7 +21,7 @@ yarn start  # start webpack-dev-server
 ## Use case
 - Big team
 - Big project
-- Lctong term maintenance proje
+- Long term maintenance project
 
 ## Suggestion for TS beginners
 - Enable `strict` flag in `tsconfig.json`, enforce the type declaration as strict as possible.
