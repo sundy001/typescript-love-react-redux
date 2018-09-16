@@ -1,32 +1,26 @@
-import { VisibilityFilters } from '../reducers';
-import { createAction } from '../type';
+import {VisibilityFilters} from '../reducers';
+import {createAction} from '../createAction';
 
 let nextTodoId = 0;
 
-export const addTodo = (text: string) =>
-  createAction(
+export const addTodo = createAction(
     'ADD_TODO',
-    {
-      id: nextTodoId++,
-      text,
-    }
-  )
-;
+    (text: string) => ({
+        id: nextTodoId++,
+        text,
+    })
+);
 
-export const setVisibilityFilter = (filter: VisibilityFilters) =>
-  createAction(
+export const setVisibilityFilter = createAction(
     'SET_VISIBILITY_FILTER',
-    {
-      filter,
-    }
-  )
-;
+    (filter: VisibilityFilters) => ({
+        filter,
+    })
+);
 
-export const toggleTodo = (id: number) =>
-  createAction(
+export const toggleTodo = createAction(
     'TOGGLE_TODO',
-    {
-      id,
-    }
-  )
-;
+    (id: number) => ({
+        id,
+    })
+);
